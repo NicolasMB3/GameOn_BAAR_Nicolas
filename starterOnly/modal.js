@@ -23,7 +23,7 @@ modalBtn.forEach((btn) => btn.addEventListener("click", launchModal));
     |__> [x] Implémenter entrées du formulaire
     |__> [x] Ajouter validation ou messages d'erreur
     |__> [x] Ajouter confirmation quand envoi réussi
-    |__> [] Tests manuels
+    |__> [x] Tests manuels
 */
 
 //
@@ -44,7 +44,7 @@ function closeModal() {
 }
 
 //
-// Section : Get input value and compare
+// Section : Get inputs values and compare (w/ regex)
 //
 
 // Get inputs value
@@ -53,7 +53,6 @@ const lastname = document.getElementById('last');
 const email = document.getElementById('email');
 const quantity = document.getElementById('quantity');
 const anniversary = document.getElementById('birthdate');
-
 
 // Get form id
 const form = document.getElementById('form');
@@ -92,7 +91,7 @@ const checkLastname = () => {
   return valid;
 }
 
-// Check lastname value to get length and compare
+// Check birthday value with regex
 const checkAnni = () => {
   // Initialize variable
   let valid = false;
@@ -112,7 +111,7 @@ const checkAnni = () => {
   return valid;
 }
 
-// Check username value to get length and compare
+// Check email value with regex
 const checkEmail = () => {
   // Initialize variable
   let valid = false;
@@ -150,6 +149,7 @@ const checkQuantity = () => {
   return valid;
 }
 
+// Check if one radio button is checked
 const checkRadio = () => {
   const listRadio = document.querySelectorAll('[name="location"]');
   const radioArea = document.getElementById('location1');
@@ -185,7 +185,7 @@ const showError = (input, message) => {
 
 form.addEventListener('submit', function (e) {
 
-  // prevent the form 
+  // Prevent from remove value 
   e.preventDefault();
   // validate fields
   let isFirstnameValid = checkFirstname(),
@@ -250,6 +250,7 @@ form.addEventListener('click', function(e) {
     case 'checkbox1':
       delError.textContent = ""
       break;
+    // This section need to be optimize ...
     case 'location1':
     case 'location2':
     case 'location3':

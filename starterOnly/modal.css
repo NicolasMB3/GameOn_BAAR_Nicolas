@@ -507,7 +507,8 @@ footer {
   }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 768px) {
+
   .hero-section {
     display: block;
     box-shadow: unset;
@@ -556,9 +557,6 @@ footer {
   .copyrights {
     text-align: center;
   }
-}
-
-@media screen and (max-width: 768px) {
 
   .content {
     position: absolute;
@@ -597,6 +595,7 @@ footer {
   }
 } 
 
+/* Modal animation */
 @keyframes modalopen {
   from {
     opacity: 0;
