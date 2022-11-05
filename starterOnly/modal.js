@@ -222,6 +222,7 @@ form.addEventListener('submit', function (e) {
   }
 });
 
+// On inputs click, delete alert message
 form.addEventListener('click', function(e) {
   const delError = e.target.parentElement.querySelector('span');
   const delBorder = delError.parentElement.querySelector("input")
