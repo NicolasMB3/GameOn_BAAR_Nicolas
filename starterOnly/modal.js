@@ -227,6 +227,7 @@ form.addEventListener('submit', function (e) {
       para.style.display = "none";
       btn.style.display = "none";
       form.style.display = "block"
+      closeModal();
     })
   }
 });
