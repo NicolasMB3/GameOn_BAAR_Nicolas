@@ -118,7 +118,7 @@ const checkEmail = () => {
   // Get input value and trim
   const emailInput = email.value.trim();
   // Regex email
-  const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  const re = /[a-z0-9]+@[a-z]+\.[a-z]{2,3}/;
   // Compare to get more than 2 caracters and less than 30 caracters
   if(!re.test(emailInput)) {
     showError(email, `Adresse email non valide`);
@@ -206,13 +206,17 @@ form.addEventListener('submit', function (e) {
     para.appendChild(textNode);
     form.parentElement.appendChild(para)
 
-
     const btn = document.createElement("button");
     btn.classList.add('btn-signup');
     btn.setAttribute('id', 'button-validate')
     btn.innerHTML = "Fermer";
     form.parentElement.appendChild(btn)
 
+    
+    // Reset form on validation
+    form.reset();
+
+    // Hide validation message on validation
     btn.addEventListener('click', () => {
       modalbg.style.display = "none";
       para.style.display = "none";
