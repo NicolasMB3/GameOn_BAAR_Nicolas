@@ -594,8 +594,11 @@ footer {
 
   .content {
     position: absolute;
+    border-radius: 0;
     top: 25px;
-    left: 0;
+    left:0;
+    max-width: 100%;
+    max-width: 100%;
   }
 
   .hero-headline {

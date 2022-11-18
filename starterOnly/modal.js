@@ -36,11 +36,16 @@ closeBtn.forEach((btn) => btn.addEventListener("click", closeModal));
 // launch modal form
 function launchModal() {
   modalbg.style.display = "block";
+  document.getElementById('myTopnav').style.position = "sticky"
+  document.getElementById('myTopnav').style.top = "0"
+  document.body.style.overflow = "hidden";
 }
 
 // close modal form
 function closeModal() {
   modalbg.style.display = "none";
+  document.getElementById('myTopnav').style.position = "static"
+  document.body.style.overflow = "auto";
 }
 
 //
