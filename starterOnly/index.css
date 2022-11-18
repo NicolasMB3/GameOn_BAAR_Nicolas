@@ -129,10 +129,6 @@ main {
   background: #3876ac;
 }
 
-.smFont {
-  font-size: 16px;
-}
-
 .bground {
   display: none;
   position: fixed;
@@ -185,27 +181,6 @@ input {
   border-radius: 8px;
   font-size: 20px;
   height: 48px;
-}
-
-.formData[data-error]::after {
-  content: attr(data-error);
-  font-size: 0.4em;
-  color: var(--red);
-  display: block;
-  margin-top: 7px;
-  margin-bottom: 7px;
-  text-align: right;
-  line-height: 0.3;
-  opacity: 0;
-  transition: 0.3s;
-}
-
-.formData[data-error-visible="true"]::after {
-  opacity: 1;
-}
-
-.formData[data-error-visible="true"] .text-control {
-  border: 2px solid var(--red);
 }
 
 .checkbox-label,
@@ -322,72 +297,7 @@ input {
   border: 0;
 }
 
-/* custom select styles */
-.custom-select {
-  position: relative;
-  font-family: Arial;
-  font-size: 1.1rem;
-  font-weight: normal;
-}
-
-.custom-select select {
-  display: none;
-}
-.select-selected {
-  background-color: var(--white);
-}
-
-/* Style the arrow inside the select element: */
-.select-selected:after {
-  position: absolute;
-  content: "";
-  top: 10px;
-  right: 13px;
-  width: 11px;
-  height: 11px;
-  border: 3px solid transparent;
-  border-bottom-color: var(--red);
-  border-left-color: var(--red);
-  transform: rotate(-48deg);
-  border-radius: 5px 0 5px 0;
-}
-
-/* Point the arrow upwards when the select box is open (active): */
-.select-selected.select-arrow-active:after {
-  transform: rotate(135deg);
-  top: 13px;
-}
-
-.select-items div,
-.select-selected {
-  color: #000;
-  padding: 11px 16px;
-  border: 1px solid transparent;
-  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
-  cursor: pointer;
-  border-radius: 8px;
-  height: 48px;
-}
-
-/* Style items (options): */
-.select-items {
-  position: absolute;
-  background-color: var(--white);
-  top: 89%;
-  left: 0;
-  right: 0;
-  z-index: 99;
-}
-
 /* Hide the items when the select box is closed: */
-.select-hide {
-  display: none;
-}
-
-.select-items div:hover,
-.same-as-selected {
-  background-color: rgba(0, 0, 0, 0.1);
-}
 
 /* custom select end */
 .text-label {
@@ -616,12 +526,6 @@ footer {
     display: block;
   }
 } 
-
-@media (max-height: 990px) {
-  .element {
-    /* do something.. */
-  }
-}
 
 /* Modal animation */
 @keyframes modalopen {
